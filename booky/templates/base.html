@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+{% block head %}
+<head>
+<style>
+
+.my-form-class {
+    max-width: 300px; 
+    margin: 0 auto;
+    padding: 20px; 
+    background-color: #f4f4f4; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+}
+
+.my-label-class {
+    font-weight: bold; 
+    display: block; 
+}
+
+.my-input-class {
+    width: 100%; 
+    padding: 10px; 
+    margin: 5px 0; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    outline: none; 
+}
+
+.my-button-class {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-weight: bold; 
+}
+
+.title {
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+</style>
+    {% include 'akey.html' %}
+{% endblock %}
+</head>
+<body>
+    {% block body %}
+
+
+    {% endblock %}
+</body>
+{% block footer %}
+<footer>
+
+ 
+</footer>
+{% endblock %}
+</html>

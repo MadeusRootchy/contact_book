@@ -1,0 +1,99 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+<style>
+  .navbar {
+	background-color: #333; 
+	color: #fff; 
+	padding: 20px; 
+	text-transform: uppercase; 
+	font-size: 16px; 
+	justify-content: flex-start;
+  }
+  
+  .navbar ul {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	margin: auto;
+  }
+  
+  .navbar li {
+	margin-right: 1rem;
+	border: 1px solid #fff;
+	padding: 5px 10px;
+	border-radius: 5px;
+  }
+  
+  .navbar a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+  }
+  
+  .navbar .title h1 {
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	display: flex;
+  size: 10px;
+  }
+  
+</style>
+
+</head>
+<body>
+
+
+{% if user.is_authenticated %}
+<nav class="navbar"> 
+  <div class="title"><h1>CONTACT-BOOK </h1></div>
+
+  <ul>
+    <li><a href="{% url 'add-contact' %}">nouvo kontak</a></li>
+    <li><a href="{% url 'index' %}">liste </a></li>
+    <li><a href="{% url 'dekonekte' %}">dekonekte</a></li>
+    
+  </ul>
+</nav>
+<hr>
+
+
+
+{% else %}
+ <nav class="navbar">
+  <div class="title"><h1>CONTACT-BOOK </h1></div>
+
+  <ul>
+    <li><a href="{% url 'index' %}">liste kontak yo</a></li>
+    <li> <a href="{% url 'newuser' %}">inskri</a></li>
+    <li> <a href="{% url 'konekte' %}">konekte</a></li>
+  </ul>
+</nav>
+
+
+{% endif %}
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

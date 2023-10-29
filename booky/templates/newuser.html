@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<form action='{% url "newuser" %}' method="post" class="my-form-class">
+    <div class="title"><h3>ENSKRI</h3></div>
+
+    {% csrf_token %}
+    <label for="id_non" class="my-label-class">Non</label>
+    <input type="text" id="id_non" name="non" required="required" class="my-input-class"><br><br>
+    <label for="modpass" class="my-label-class">Modpas</label>
+    <input type="password" id="id_modpass" name "modpas" required="required" class="my-input-class"><br><br>
+    <button type="submit" class="my-button-class">Antrejistre</button>
+</form>
+
+{% endblock %}
